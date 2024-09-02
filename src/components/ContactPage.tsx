@@ -7,7 +7,7 @@ const ContactPage: React.FC = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_bkg03iq', 'template_p3ilptc', e.currentTarget, '0ZE_zARFVYzE-vqYY')
+    emailjs.sendForm('service_bkg03iq', 'template_mfqw4lq', e.currentTarget, '0ZE_zARFVYzE-vqYY')
       .then((result) => {
         // Handle success
         console.log('Success:', result.text);
