@@ -1,6 +1,23 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
 
 const ContactPage: React.FC = () => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_bkg03iq', 'template_fdztevu', e.currentTarget)
+      .then((result) => {
+        // Handle success
+        console.log('Success:', result.text);
+        alert('Message sent successfully!');
+      })
+      .catch((error) => {
+        // Handle error
+        console.error('Error:', error.text);
+        alert('Error sending message. Please try again.');
+      });
+  };
+
   return (
     <main className="bg-white py-12">
       {/* Centered Contact Form Section */}
@@ -19,9 +36,7 @@ const ContactPage: React.FC = () => {
           <form
             id="contact"
             name="Contact Form"
-            method="post"
-            data-netlify-recaptcha="true"
-            data-netlify="true"
+            onSubmit={sendEmail}
             className="space-y-4"
           >
             <div className="input-group">
@@ -74,7 +89,6 @@ const ContactPage: React.FC = () => {
                 type="submit"
                 id="contact-submit"
                 className="bg-[rgb(16,98,94)] text-white px-4 py-2 rounded"
-                data-submit="...Sending"
               >
                 Send
               </button>
