@@ -22,10 +22,7 @@ const Footer: React.FC = () => {
               <li><Link href="/testimonials" className="text-blue-500 hover:text-white transition-colors">Testimonials</Link></li>
               <li><Link href="/contacts" className="text-blue-500 hover:text-white transition-colors">Contact</Link></li>
             </ul>
-            <ul className="mb-6 md:mb-0">
-              <li><h2 className="font-semibold text-lg">Support</h2></li>
-              <li><Link href="/contact.html" className="text-blue-500 hover:text-white transition-colors">Contact Us</Link></li>
-            </ul>
+          
            
           </div>
           
