@@ -7,11 +7,14 @@ const ContactPage: React.FC = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_bkg03iq', 'template_mfqw4lq', e.currentTarget, '0ZE_zARFVYzE-vqYY')
+    const form = e.currentTarget;
+
+    emailjs.sendForm('service_bkg03iq', 'template_mfqw4lq', form, '0ZE_zARFVYzE-vqYY')
       .then((result) => {
         // Handle success
         console.log('Success:', result.text);
         alert('Message sent successfully!');
+        form.reset(); // Clear the form fields
       })
       .catch((error) => {
         // Handle error
