@@ -10,7 +10,7 @@ const About = () => {
 
       {/* Who We Are Section */}
       <section id="who-we-are" className="py-12">
-        <div className="container mx-auto flex flex-col md:flex-row items-center px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto flex flex-col md:flex-row items-center">
           <div className="flex-1 mb-8 md:mb-0">
             <Image
               src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D"
@@ -21,15 +21,16 @@ const About = () => {
               quality={100}
             />
           </div>
-          <div className="flex-1 md:ml-8">
-            <span className="block text-lg font-semibold mb-4" style={{ color: 'rgb(16,98,94)' }}>Who We Are</span>
-            <p className="text-base leading-relaxed mb-4">
-              LetsCode crafts tailored software for your unique needs and revolutionizes learning.
-            </p>
-            <p>
-              LetsCode Tech Products crafts tailored software solutions for individuals and businesses, ensuring each product seamlessly fits unique needs, elevating you in the tech landscape. In tech education, LetsCode revolutionizes learning with personalized approaches, hands-on projects, and a vibrant community, nurturing innovation and empowering aspiring coders for growth.
-            </p>
-          </div>
+       <div className="flex-1 md:ml-8 px-4 sm:px-6 lg:px-8">
+  <span className="block text-lg font-semibold mb-4" style={{ color: 'rgb(16,98,94)' }}>Who We Are</span>
+  <p className="text-base leading-relaxed mb-4">
+    LetsCode crafts tailored software for your unique needs and revolutionizes learning.
+  </p>
+  <p>
+    LetsCode Tech Products crafts tailored software solutions for individuals and businesses, ensuring each product seamlessly fits unique needs, elevating you in the tech landscape. In tech education, LetsCode revolutionizes learning with personalized approaches, hands-on projects, and a vibrant community, nurturing innovation and empowering aspiring coders for growth.
+  </p>
+</div>
+
         </div>
       </section>
 
@@ -42,9 +43,9 @@ const About = () => {
             Our dedicated team brings expertise and passion to ensure your needs are met. No empty promises—just commitment and results.
           </p>
         </div>
-        <div className="container mx-auto flex flex-wrap justify-center px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto flex flex-wrap justify-center">
           {/* Staff Member 1 */}
-          <div className="flex flex-col md:flex-row items-center mb-8 w-full max-w-sm">
+          <div className="flex flex-col md:flex-row items-center mb-8 w-full md:w-auto">
             <Image
               src="/images/Mollen Wambui.jpg"
               alt="Mollen Wambui"
@@ -63,7 +64,7 @@ const About = () => {
           </div>
 
           {/* Staff Member 2 */}
-          <div className="flex flex-col md:flex-row items-center mb-8 w-full max-w-sm">
+          <div className="flex flex-col md:flex-row items-center mb-8 w-full md:w-auto">
             <Image
               src="/images/Kenneth Ndiritu.jpg"
               alt="Kenneth Ndiritu"
@@ -82,7 +83,7 @@ const About = () => {
           </div>
 
           {/* Staff Member 3 */}
-          <div className="flex flex-col md:flex-row items-center mb-8 w-full max-w-sm">
+          <div className="flex flex-col md:flex-row items-center mb-8 w-full md:w-auto">
             <Image
               src="/images/Lucy Wangari.jpg"
               alt="Lucy Wangari"
