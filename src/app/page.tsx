@@ -66,7 +66,7 @@ export default function HomePage() {
               <div className="inline-flex items-center px-4 py-2 bg-[rgb(14,129,124)] text-white text-sm rounded-md shadow-lg hover:bg-[rgb(16,98,94)] transition-transform duration-300 transform hover:scale-105">
                 <PhoneIcon className="w-4 h-4 mr-2" />
                 <a href="tel:+254110361540" className="text-white">
-                  CALL NOW +254 110361540
+                  CALL NOW +254 758612917
                 </a>
               </div>
             </div>
