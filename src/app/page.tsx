@@ -73,8 +73,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className={`${spaceMono.className} text-5xl md:text-7xl font-bold mb-6`}>
-              <span className="bg-gradient-to-r from-teal-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
-                Democratizing
+<span className="text-lg font-bold bg-gradient-to-r from-teal-400 to-emerald-500 bg-clip-text text-transparent">                Democratizing
               </span>{" "}
               <span className="text-white">Tech Education</span>
             </h1>
@@ -463,7 +462,7 @@ export default function HomePage() {
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <motion.a
-                    href="#"
+                    href="/contacts"
                     className="px-8 py-4 bg-gradient-to-r from-teal-500 to-emerald-600 text-white rounded-full font-medium shadow-lg hover:shadow-teal-500/30 transition-all"
                     whileHover={{ scale: 1.05, y: -5 }}
                     whileTap={{ scale: 0.95 }}
@@ -471,7 +470,7 @@ export default function HomePage() {
                     Apply Now
                   </motion.a>
                   <motion.a
-                    href="tel:+254110361540"
+                    href="tel:+254714573892"
                     className="px-8 py-4 bg-black/30 backdrop-blur-lg border border-white/10 rounded-full font-medium flex items-center justify-center gap-2"
                     whileHover={{ scale: 1.05, y: -5 }}
                     whileTap={{ scale: 0.95 }}
