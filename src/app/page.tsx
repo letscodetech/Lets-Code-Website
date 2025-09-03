@@ -96,7 +96,7 @@ export default function HomePage() {
                 whileTap={{ scale: 0.95 }}
               >
                 <PhoneIcon className="w-5 h-5 text-teal-400" />
-                <a href="tel:+254110361540" className="text-white">
+                <a href="tel:+254714573892" className="text-white">
                   +254 714573892
                 </a>
               </motion.div>
