@@ -1,28 +1,125 @@
+"use client"
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer id="footer" className="bg-gray-800 text-white py-6">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between px-4 md:px-0">
-        <div className="left-section mb-6 md:mb-0">
-          <a className="logo" href="/">
-            <img src="/images/Logo White.png" alt="Logo" className="h-13 w-auto" />
-          </a>
-        </div>
-        <div className="right-section flex flex-col md:flex-row justify-between">
-          <div className="lists flex flex-col md:flex-row">
-            <ul className="mb-6 md:mb-0">
-              <li><h2 className="font-semibold text-lg">Company</h2></li>
-              <li><Link href="/" className="text-blue-500 hover:text-white transition-colors">Home</Link></li>
-              <li><Link href="/about" className="text-blue-500 hover:text-white transition-colors">About</Link></li>
-              <li><Link href="/testimonials" className="text-blue-500 hover:text-white transition-colors">Testimonials</Link></li>
-              <li><Link href="/contacts" className="text-blue-500 hover:text-white transition-colors">Contact</Link></li>
+    <footer className="relative bg-gradient-to-t from-gray-900 to-black text-white pt-20 pb-10 overflow-hidden">
+      {/* Footer background pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CiAgPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTTAgMGg0MHY0MEgweiIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDMpIiBmaWxsPSJub25lIi8+Cjwvc3ZnPg==')] opacity-10"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+          {/* Logo and Description */}
+          <div className="lg:col-span-2">
+            <Link href="/" className="inline-block mb-6">
+              <div className="flex items-center group">
+                <Image 
+                  src="/images/Logo White.png" 
+                  alt="Logo" 
+                  width={120} 
+                  height={60}
+                  className="h-12 w-auto mr-3 transition-transform duration-300 group-hover:scale-105" 
+                />
+                
+              </div>
+            </Link>
+            <p className="text-gray-400 mb-6 max-w-md">
+              Democratizing tech education and igniting the spark of innovation in every aspiring coder through accessible, high-quality tech education.
+            </p>
+            
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-xl font-bold mb-6 text-white">Quick Links</h3>
+            <ul className="space-y-3">
+              {[
+                { name: 'Home', href: '/' },
+                { name: 'About', href: '/about' },
+                { name: 'Programs', href: '/#programs' },
+                { name: 'Contact', href: '/contacts' }
+              ].map((link, index) => (
+                <li key={link.name} className="opacity-0 animate-fade-in" style={{ animationDelay: `${0.2 + index * 0.1}s` }}>
+                  <Link 
+                    href={link.href} 
+                    className="text-gray-400 hover:text-teal-400 transition-colors duration-300 flex items-center group"
+                  >
+                    <span className="w-1 h-1 bg-teal-400 rounded-full mr-2 transition-all duration-300 group-hover:w-2"></span>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-xl font-bold mb-6 text-white">Contact Us</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start opacity-0 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                <div className="w-8 h-8 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0 mr-3">
+                  <Phone className="w-4 h-4 text-teal-400" />
+                </div>
+                <div>
+                  <p className="text-gray-400 text-sm">Phone</p>
+                  <a href="tel:+254110361540" className="text-gray-300 hover:text-teal-400 transition-colors duration-300">
+                    +254 714573892
+                  </a>
+                </div>
+              </li>
+              
+              <li className="flex items-start opacity-0 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                <div className="w-8 h-8 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0 mr-3">
+                  <Mail className="w-4 h-4 text-teal-400" />
+                </div>
+                <div>
+                  <p className="text-gray-400 text-sm">Email</p>
+                  <a href="mailto:info@lets-code.tech" className="text-gray-300 hover:text-teal-400 transition-colors duration-300">
+                        letsscodeinc@gmail.com
+                  </a>
+                </div>
+              </li>
+              
+              <li className="flex items-start opacity-0 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+                <div className="w-8 h-8 rounded-full bg-teal-500/20 flex items-center justify-center flex-shrink-0 mr-3">
+                  <MapPin className="w-4 h-4 text-teal-400" />
+                </div>
+                <div>
+                  <p className="text-gray-400 text-sm">Location</p>
+                  <p className="text-gray-300">Thika, Kenya</p>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
+
+        {/* Copyright */}
+        <div className="pt-8 border-t border-white/10 text-center opacity-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <p className="text-gray-500 text-sm">
+            © {new Date().getFullYear()} LetsCode. All rights reserved.
+          </p>
+        </div>
       </div>
+
+      <style jsx global>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .animate-fade-in {
+          animation: fade-in 0.6s ease-out forwards;
+        }
+      `}</style>
     </footer>
   );
 };
