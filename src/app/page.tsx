@@ -60,7 +60,7 @@ export default function HomePage() {
               }}
             />
           ))}
-          
+
           {/* Tech grid pattern */}
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CiAgPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTTAgMGg0MHY0MEgweiIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDMpIiBmaWxsPSJub25lIi8+Cjwvc3ZnPg==')] opacity-20"></div>
         </div>
@@ -73,7 +73,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className={`${spaceMono.className} text-5xl md:text-7xl font-bold mb-6`}>
-<span className="text-lg font-bold bg-gradient-to-r from-teal-400 to-emerald-500 bg-clip-text text-transparent">                Democratizing
+<span className="bg-gradient-to-r from-teal-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">                              Democratizing
               </span>{" "}
               <span className="text-white">Tech Education</span>
             </h1>
@@ -108,7 +108,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Students Stat */}
-              <motion.div 
+              <motion.div
                 className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -127,7 +127,7 @@ export default function HomePage() {
               </motion.div>
 
               {/* Success Rate Stat */}
-              <motion.div 
+              <motion.div
                 className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -146,7 +146,7 @@ export default function HomePage() {
               </motion.div>
 
               {/* Products Stat */}
-              <motion.div 
+              <motion.div
                 className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10 text-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -170,7 +170,7 @@ export default function HomePage() {
         {/* Programs Section */}
         <section id="programs" className="py-20 px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -185,7 +185,7 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* School Training Card */}
-              <motion.div 
+              <motion.div
                 className="bg-gradient-to-br from-gray-800/50 to-black/50 backdrop-blur-lg rounded-2xl p-8 border border-white/10 overflow-hidden relative"
                 whileHover={{ y: -15, borderColor: "rgba(20, 184, 166, 0.3)" }}
                 initial={{ opacity: 0, y: 20 }}
@@ -206,13 +206,13 @@ export default function HomePage() {
                     className="inline-flex items-center text-teal-400 font-medium"
                     whileHover={{ x: 5 }}
                   >
-                   
+
                   </motion.a>
                 </div>
               </motion.div>
 
               {/* Bootcamps Card */}
-              <motion.div 
+              <motion.div
                 className="bg-gradient-to-br from-gray-800/50 to-black/50 backdrop-blur-lg rounded-2xl p-8 border border-white/10 overflow-hidden relative"
                 whileHover={{ y: -15, borderColor: "rgba(20, 184, 166, 0.3)" }}
                 initial={{ opacity: 0, y: 20 }}
@@ -233,13 +233,13 @@ export default function HomePage() {
                     className="inline-flex items-center text-teal-400 font-medium"
                     whileHover={{ x: 5 }}
                   >
-                    
+
                   </motion.a>
                 </div>
               </motion.div>
 
               {/* Tech Products Card */}
-              <motion.div 
+              <motion.div
                 className="bg-gradient-to-br from-gray-800/50 to-black/50 backdrop-blur-lg rounded-2xl p-8 border border-white/10 overflow-hidden relative"
                 whileHover={{ y: -15, borderColor: "rgba(20, 184, 166, 0.3)" }}
                 initial={{ opacity: 0, y: 20 }}
@@ -265,7 +265,7 @@ export default function HomePage() {
               </motion.div>
 
               {/* Consultancy Card */}
-              <motion.div 
+              <motion.div
                 className="bg-gradient-to-br from-gray-800/50 to-black/50 backdrop-blur-lg rounded-2xl p-8 border border-white/10 overflow-hidden relative"
                 whileHover={{ y: -15, borderColor: "rgba(20, 184, 166, 0.3)" }}
                 initial={{ opacity: 0, y: 20 }}
@@ -286,7 +286,7 @@ export default function HomePage() {
                     className="inline-flex items-center text-teal-400 font-medium"
                     whileHover={{ x: 5 }}
                   >
-                   
+
                   </motion.a>
                 </div>
               </motion.div>
@@ -297,7 +297,7 @@ export default function HomePage() {
         {/* Course Details Section */}
         <section className="py-20 px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -312,7 +312,7 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Mobile App Development Card */}
-              <motion.div 
+              <motion.div
                 className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
                 whileHover={{ y: -10, borderColor: "rgba(20, 184, 166, 0.3)" }}
                 initial={{ opacity: 0, y: 20 }}
@@ -327,7 +327,7 @@ export default function HomePage() {
               </motion.div>
 
               {/* Game Development Card */}
-              <motion.div 
+              <motion.div
                 className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
                 whileHover={{ y: -10, borderColor: "rgba(20, 184, 166, 0.3)" }}
                 initial={{ opacity: 0, y: 20 }}
@@ -342,7 +342,7 @@ export default function HomePage() {
               </motion.div>
 
               {/* Full Stack Development Card */}
-              <motion.div 
+              <motion.div
                 className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
                 whileHover={{ y: -10, borderColor: "rgba(20, 184, 166, 0.3)" }}
                 initial={{ opacity: 0, y: 20 }}
@@ -357,7 +357,7 @@ export default function HomePage() {
               </motion.div>
 
               {/* AI Card */}
-              <motion.div 
+              <motion.div
                 className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
                 whileHover={{ y: -10, borderColor: "rgba(20, 184, 166, 0.3)" }}
                 initial={{ opacity: 0, y: 20 }}
@@ -377,7 +377,7 @@ export default function HomePage() {
         {/* Testimonials Section */}
         <section id="testimonials" className="py-20 px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <motion.div 
+            <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -392,7 +392,7 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Testimonial 1 */}
-              <motion.div 
+              <motion.div
                 className="bg-black/30 backdrop-blur-lg rounded-2xl p-8 border border-white/10"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -417,7 +417,7 @@ export default function HomePage() {
               </motion.div>
 
               {/* Testimonial 2 */}
-              <motion.div 
+              <motion.div
                 className="bg-black/30 backdrop-blur-lg rounded-2xl p-8 border border-white/10"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -447,7 +447,7 @@ export default function HomePage() {
         {/* Call to Action Section */}
         <section className="py-20 px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div 
+            <motion.div
               className="bg-gradient-to-br from-gray-800/50 to-black/50 backdrop-blur-lg rounded-3xl p-12 border border-white/10 overflow-hidden relative"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
