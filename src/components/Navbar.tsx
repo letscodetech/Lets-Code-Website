@@ -1,4 +1,4 @@
-'use client'; // Ensure this directive is present for Client Component
+'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -31,10 +31,19 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
+  // Define menu items
+  const menuItems = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Programs', href: '/#programs' },
+    { name: 'Contact', href: '/contacts' },
+    { name: 'Classes', href: '/classes' } // Changed from "Learn with LetsCode" to "Courses"
+  ];
+
   return (
     <motion.nav
       className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-lg' : 'bg-black/30 backdrop-blur-md'
-        } rounded-full px-6 py-3 border border-white/10 shadow-lg`}
+        } rounded-full px-4 md:px-6 py-3 border border-white/10 shadow-lg`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
@@ -59,18 +68,11 @@ const Navbar = () => {
           <div className="flex-1 flex justify-end">
             {/* Desktop Menu */}
             <div className="hidden lg:flex space-x-1 items-center">
-              {[
-                { name: 'Home', href: '/' },
-                { name: 'About', href: '/about' },
-                { name: 'Programs', href: '/#programs' },
-                { name: 'Contact', href: '/contacts' },
-                { name: 'Learn with LetsCode', href: '/courses' }
-
-              ].map((item) => (
+              {menuItems.map((item) => (
                 <motion.div key={item.name} whileHover={{ scale: 1.05 }}>
                   <Link
                     href={item.href}
-                    className="px-4 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all"
+                    className="px-3 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all"
                   >
                     {item.name}
                   </Link>
@@ -79,7 +81,7 @@ const Navbar = () => {
 
               <motion.a
                 href="tel:+254714573892"
-                className="ml-4 px-3 py-1.5 bg-gradient-to-r from-teal-500 to-emerald-600 text-white rounded-full text-sm font-medium flex items-center shadow-lg hover:shadow-teal-500/30 transition-all whitespace-nowrap"
+                className="ml-2 px-3 py-1.5 bg-gradient-to-r from-teal-500 to-emerald-600 text-white rounded-full text-sm font-medium flex items-center shadow-lg hover:shadow-teal-500/30 transition-all whitespace-nowrap"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -112,12 +114,7 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="flex flex-col space-y-2">
-              {[
-                { name: 'Home', href: '/' },
-                { name: 'About', href: '/about' },
-                { name: 'Programs', href: '/#programs' },
-                { name: 'Contact', href: '/contacts' }
-              ].map((item) => (
+              {menuItems.map((item) => (
                 <motion.div key={item.name} whileHover={{ x: 5 }}>
                   <Link
                     href={item.href}
