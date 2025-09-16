@@ -300,7 +300,7 @@ const About = () => {
         </section>
 
         {/* Footer */}
-    
+  
       </div>
     </>
   );

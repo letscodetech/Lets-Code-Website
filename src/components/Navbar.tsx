@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Menu, X, Phone } from 'lucide-react';
-import { spaceMono } from '../styling/font'; 
+import { spaceMono } from '../styling/font';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,10 +32,9 @@ const Navbar = () => {
   };
 
   return (
-    <motion.nav 
-      className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/80 backdrop-blur-lg' : 'bg-black/30 backdrop-blur-md'
-      } rounded-full px-6 py-3 border border-white/10 shadow-lg`}
+    <motion.nav
+      className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/80 backdrop-blur-lg' : 'bg-black/30 backdrop-blur-md'
+        } rounded-full px-6 py-3 border border-white/10 shadow-lg`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
@@ -44,18 +43,18 @@ const Navbar = () => {
         <div className={`flex justify-between items-center ${spaceMono.className}`}>
           {/* Left spacer for centering */}
           <div className="flex-1"></div>
-          
+
           {/* Centered Logo */}
           <div className="flex items-center justify-center">
             <Link href="/" className="flex items-center">
-              <motion.div 
+              <motion.div
                 whileHover={{ scale: 1.05 }}
               >
                 <img src="/images/logo.png" alt="Logo" className="h-8 w-auto" />
               </motion.div>
             </Link>
           </div>
-          
+
           {/* Right side with menu items */}
           <div className="flex-1 flex justify-end">
             {/* Desktop Menu */}
@@ -64,20 +63,22 @@ const Navbar = () => {
                 { name: 'Home', href: '/' },
                 { name: 'About', href: '/about' },
                 { name: 'Programs', href: '/#programs' },
-                { name: 'Contact', href: '/contacts' }
+                { name: 'Contact', href: '/contacts' },
+                { name: 'Learn with LetsCode', href: '/courses' }
+
               ].map((item) => (
                 <motion.div key={item.name} whileHover={{ scale: 1.05 }}>
-                  <Link 
-                    href={item.href} 
+                  <Link
+                    href={item.href}
                     className="px-4 py-2 rounded-full text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all"
                   >
                     {item.name}
                   </Link>
                 </motion.div>
               ))}
-              
+
               <motion.a
-                href="tel:+254110361540"
+                href="tel:+254714573892"
                 className="ml-4 px-3 py-1.5 bg-gradient-to-r from-teal-500 to-emerald-600 text-white rounded-full text-sm font-medium flex items-center shadow-lg hover:shadow-teal-500/30 transition-all whitespace-nowrap"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -103,7 +104,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <motion.div 
+          <motion.div
             className="lg:hidden mt-4 bg-black/80 backdrop-blur-lg rounded-2xl border border-white/10 p-4 overflow-hidden"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
@@ -118,8 +119,8 @@ const Navbar = () => {
                 { name: 'Contact', href: '/contacts' }
               ].map((item) => (
                 <motion.div key={item.name} whileHover={{ x: 5 }}>
-                  <Link 
-                    href={item.href} 
+                  <Link
+                    href={item.href}
                     className="block px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                     onClick={closeMobileMenu}
                   >
@@ -127,9 +128,9 @@ const Navbar = () => {
                   </Link>
                 </motion.div>
               ))}
-              
+
               <motion.a
-                href="tel:+254110361540"
+                href="tel:+254714573892"
                 className="mt-4 px-4 py-3 bg-gradient-to-r from-teal-500 to-emerald-600 text-white rounded-xl text-sm font-medium flex items-center justify-center shadow-lg whitespace-nowrap"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
