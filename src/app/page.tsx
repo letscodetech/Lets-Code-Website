@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { PhoneIcon, Users, TrendingUp, Package, Star, Quote, GraduationCap, Zap, Code, Briefcase } from "lucide-react"; // Added Briefcase icon
 import { spaceMono } from "../styling/font";
 import Footer from "@/components/Footer";
@@ -368,6 +368,66 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold mb-3">Artificial Intelligence</h3>
                 <p className="text-gray-400 text-sm">
                   Explore machine learning, neural networks, and learn to build intelligent applications with AI technologies.
+                </p>
+              </motion.div>
+
+              {/* Data Science Card */}
+              <motion.div
+                className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
+                whileHover={{ y: -10, borderColor: "rgba(20, 184, 166, 0.3)" }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+              >
+                <div className="text-teal-400 font-medium mb-2">4 Months</div>
+                <h3 className="text-xl font-bold mb-3">Data Science</h3>
+                <p className="text-gray-400 text-sm">
+                  Master data analysis, visualization, and statistical modeling to extract insights from complex datasets.
+                </p>
+              </motion.div>
+
+              {/* Machine Learning Card */}
+              <motion.div
+                className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
+                whileHover={{ y: -10, borderColor: "rgba(20, 184, 166, 0.3)" }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+              >
+                <div className="text-teal-400 font-medium mb-2">4 Months</div>
+                <h3 className="text-xl font-bold mb-3">Machine Learning</h3>
+                <p className="text-gray-400 text-sm">
+                  Dive deep into algorithms, predictive modeling, and pattern recognition to build intelligent systems.
+                </p>
+              </motion.div>
+
+              {/* QA Card */}
+              <motion.div
+                className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
+                whileHover={{ y: -10, borderColor: "rgba(20, 184, 166, 0.3)" }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+              >
+                <div className="text-teal-400 font-medium mb-2">2 Months</div>
+                <h3 className="text-xl font-bold mb-3">Quality Assurance</h3>
+                <p className="text-gray-400 text-sm">
+                  Learn testing methodologies, automation tools, and best practices to ensure software quality and reliability.
+                </p>
+              </motion.div>
+
+              {/* Cyber Security Card */}
+              <motion.div
+                className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10"
+                whileHover={{ y: -10, borderColor: "rgba(20, 184, 166, 0.3)" }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 }}
+              >
+                <div className="text-teal-400 font-medium mb-2">4 Months</div>
+                <h3 className="text-xl font-bold mb-3">Cyber Security</h3>
+                <p className="text-gray-400 text-sm">
+                  Master the techniques to protect systems, networks, and data from digital attacks and security breaches.
                 </p>
               </motion.div>
             </div>
