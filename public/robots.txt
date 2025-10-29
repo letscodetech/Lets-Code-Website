@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://letcodeltd.com
+
+# Sitemaps
+Sitemap: https://letcodeltd.com/sitemap.xml
+Sitemap: https://letcodeltd.com/server-sitemap.xml

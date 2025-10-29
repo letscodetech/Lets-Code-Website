@@ -24,17 +24,34 @@ export default function HomePage() {
 
   return (
     <>
-      <Head>
-        <title>LetsCode | Democratizing Tech Education</title>
-        <meta name="description" content="LetsCode is a tech startup aimed at democratizing tech education and innovation. Join us for bootcamps, school training, and tailored tech products." />
-        <meta name="keywords" content="tech education, coding bootcamp, tech products, school training" />
-        <meta name="author" content="LetsCode, letsCode, Lets Code" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="LetsCode | Democratizing Tech Education" />
-        <meta property="og:description" content="We provide inclusive tech education and innovation through bootcamps, school training, and custom tech products." />
-        <meta property="og:image" content="/path-to-image.jpg" />
-        <meta property="og:url" content="https://www.lets-code.tech/" />
-      </Head>
+<Head>
+  <title>LetsCode Ltd | Coding for Kids, Teens & Adults | Learn Programming Online</title>
+  <meta name="description" content="LetsCode Ltd offers virtual coding classes, tech bootcamps, and custom software solutions. Learn programming languages, app development, game development, AI, data science, and more. Empower kids, teens, and adults to code and innovate with expert mentors." />
+  <meta name="keywords" content="LetsCode, LetsCode Ltd, coding, programming, coding for kids, learn to code, online coding classes, programming languages, Python, JavaScript, Java, C++, HTML, CSS, React, Next.js, AI, machine learning, data science, app development, game development, tech bootcamp, virtual coding classes, software development, tech education, programming for beginners, STEM education, coding for teens, coding for adults" />
+  <meta name="author" content="LetsCode Ltd" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  {/* Open Graph */}
+  <meta property="og:title" content="LetsCode Ltd | Coding for Kids, Teens & Adults | Learn Programming Online" />
+  <meta property="og:description" content="Join LetsCode Ltd for expert-led online coding classes, bootcamps, and custom tech solutions. Learn programming, AI, data science, game development, and app development from anywhere in the world." />
+  <meta property="og:image" content="/path-to-image.jpg" />
+  <meta property="og:url" content="https://www.letcodeltd.com/" />
+  <meta property="og:type" content="website" />
+
+  {/* Social Media Info */}
+  <meta name="tiktok:username" content="@letscode_" />
+  <meta name="tiktok:company" content="LetsCode Ltd" />
+  <meta name="instagram:username" content="@letscodetech" />
+  <meta name="instagram:company" content="LetsCode Ltd" />
+
+  {/* Extra SEO-friendly meta tags */}
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="topic" content="Coding, Programming, Technology Education, Online Learning, Software Development" />
+  <meta name="coverage" content="Worldwide" />
+  <meta name="rating" content="General" />
+</Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden relative">
         {/* Floating animated background shapes */}
@@ -72,11 +89,16 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className={`${spaceMono.className} text-5xl md:text-7xl font-bold mb-6`}>
-<span className="bg-gradient-to-r from-teal-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">                              Democratizing
+            <h1 className={`${spaceMono.className} text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight`}>
+              <span className="bg-gradient-to-r from-teal-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
+                Democratizing
               </span>{" "}
-              <span className="text-white">Tech Education</span>
+              <span className="text-white">
+                Tech Education
+              </span>
             </h1>
+
+
             <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
               Igniting the spark of innovation in every aspiring coder through accessible, high-quality tech education.
             </p>
