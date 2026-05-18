@@ -206,7 +206,7 @@ const ContactPage: React.FC = () => {
                       <h3 className="text-xl font-bold mb-2">Email Us</h3>
                       <p className="text-gray-400 mb-3">Send us an email anytime.</p>
                       <a href="mailto:info@lets-code.tech" className="text-teal-400 hover:text-teal-300 transition-colors">
-                        letsscodeinc@gmail.com
+                        info@letscodeltd.com
                       </a>
                     </div>
                   </div>
