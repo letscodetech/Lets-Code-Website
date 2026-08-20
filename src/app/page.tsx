@@ -54,8 +54,8 @@ const services: Array<{
     eyebrow: "For Individuals",
     title: "Tech Courses",
     description:
-      "Fullstack Web Development and AI & Automation — structured, practical courses you can take recorded or live with an instructor.",
-    features: ["Fullstack Web Dev", "AI & Automation", "Live & recorded options", "Certificate on completion"],
+      "Fullstack Web Development, AI & Automation, Data Analytics, and Mobile App Development: structured, practical courses you can take recorded or live with an instructor.",
+    features: ["Fullstack Web Dev", "AI & Automation", "Data Analytics", "Mobile App Development", "Live & recorded options", "Certificate on completion"],
     cta: "Browse Courses",
     href: "/classes",
     wa: null,
@@ -66,7 +66,7 @@ const services: Array<{
     eyebrow: "For Schools",
     title: "Career Days & School Training",
     description:
-      "We come to your school. Tech career days, coding workshops, and digital literacy sessions that show students what's possible in tech — delivered by working professionals.",
+      "We come to your school. Tech career days, coding workshops, and digital literacy sessions that show students what's possible in tech, delivered by working professionals.",
     features: ["Career day facilitation", "Student coding workshops", "Digital literacy sessions", "Customised for your school"],
     cta: "Book Your School",
     href: null,
@@ -78,8 +78,8 @@ const services: Array<{
     eyebrow: "For Companies",
     title: "B2B Tech Training",
     description:
-      "Upskill your team in the technologies that matter. From Python automation to AI tools integration — we train your staff on-site or online, tailored to your business.",
-    features: ["On-site or online delivery", "Custom curriculum", "Python & AI tools", "Team assessments included"],
+      "Upskill your team in the technologies that matter. From Python automation to AI tools integration and cyber security, we train your staff onsite or online, tailored to your business.",
+    features: ["Onsite or online delivery", "Custom curriculum", "Python, AI Tools & Cyber Security", "Team assessments included"],
     cta: "Get a Quote",
     href: null,
     wa: `Hi, I'm interested in B2B tech training for my company. Can you send me a quote and more details?`,
@@ -195,7 +195,7 @@ export default function HomePage() {
           ))}
         </div>
 
-        {/* ── Hero ── */}
+        {/* Hero */}
         <header className="relative pt-32 pb-20 px-4 text-center z-10">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <span className="inline-block text-xs font-medium tracking-widest text-teal-400 uppercase mb-4 px-3 py-1 border border-teal-500/30 rounded-full bg-teal-500/10">
@@ -238,7 +238,7 @@ export default function HomePage() {
           </motion.div>
         </header>
 
-        {/* ── Stats ── */}
+        {/* Stats */}
         <section className="py-12 px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -260,7 +260,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Our Services ── */}
+        {/* Our Services */}
         <section id="services" className="py-20 px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -276,7 +276,7 @@ export default function HomePage() {
                 </span>
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Whether you're an individual learning to code, a school planning a career day, a company upskilling its team, or a business that needs software — we've got you covered.
+                Whether you're an individual learning to code, a school planning a career day, a company upskilling its team, or a business that needs software, we've got you covered.
               </p>
             </motion.div>
 
@@ -350,7 +350,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Why LetsCode ── */}
+        {/* Why LetsCode */}
         <section className="py-20 px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             <motion.div
@@ -368,7 +368,7 @@ export default function HomePage() {
                     The first in Kenya to do this at scale.
                   </h2>
                   <p className="text-gray-400 leading-relaxed mb-6">
-                    Most companies either teach coding or build software. We do both — and we take it into schools and boardrooms too. That's not common in Kenya. We're building the pipeline from student curiosity to corporate capability, one training at a time.
+                    Most companies either teach coding or build software. We do both, and we take it into schools and boardrooms too. That's not common in Kenya. We're building the pipeline from student curiosity to corporate capability, one training at a time.
                   </p>
                   <motion.a
                     href={buildWhatsAppUrl(`Hi, I'd like to partner with LetsCode. Please tell me more.`)}
@@ -403,7 +403,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Testimonials ── */}
+        {/* Testimonials */}
         <section id="testimonials" className="py-20 px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -452,7 +452,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Clients ── */}
+        {/* Clients */}
         <section id="clients" className="py-20 px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -511,7 +511,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── CTA ── */}
+        {/* CTA */}
         <section className="py-20 px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -529,7 +529,7 @@ export default function HomePage() {
                   </span>
                 </h2>
                 <p className="text-gray-300 mb-3 max-w-xl mx-auto">
-                  Whether you need a course, a career day, team training, or a software build — reach out and we'll put together the right plan for you.
+                  Whether you need a course, a career day, team training, or a software build, reach out and we'll put together the right plan for you.
                 </p>
                 <p className="text-teal-400 text-sm mb-10 font-medium">
                   Response within 24 hours, guaranteed.

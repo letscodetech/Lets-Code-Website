@@ -17,7 +17,7 @@ const courses = [
     id: 'fullstack',
     name: 'Fullstack Web Development',
     description:
-      'From your first HTML tag to production-ready Next.js apps. Build real, full-stack products on the web.',
+      'From your first HTML tag to production ready Next.js apps. Build real, fullstack products on the web.',
     modules: ['HTML & CSS', 'JavaScript', 'React', 'Next.js', 'APIs & Databases'],
     level: 'Beginner → Advanced',
     recordedPrice: 3000,
@@ -28,12 +28,34 @@ const courses = [
     id: 'ai',
     name: 'AI & Automation',
     description:
-      'Build intelligent systems and automate real-world workflows using Python and modern AI libraries.',
+      'Build intelligent systems and automate real world workflows using Python and modern AI libraries.',
     modules: ['Python Fundamentals', 'NumPy & Pandas', 'Machine Learning',  'Automation & Scripting'],
     level: 'Intermediate',
     recordedPrice: 3000,
     livePrice: 5000,
     waMessage: `Hi, I'd like to enrol in the AI & Automation course. Please send me payment and enrolment details.`,
+  },
+  {
+    id: 'data-analytics',
+    name: 'Data Analytics',
+    description:
+      'Turn raw data into decisions. Learn to collect, query, clean, and visualise data the way working analysts do.',
+    modules: ['Foundations', 'SQL', 'Python for Data', 'Visualization & Capstone'],
+    level: 'Beginner → Intermediate',
+    recordedPrice: 3000,
+    livePrice: 5000,
+    waMessage: `Hi, I'd like to enrol in the Data Analytics course. Please send me payment and enrolment details.`,
+  },
+  {
+    id: 'mobile-app-dev',
+    name: 'Mobile App Development',
+    description:
+      'Design and ship mobile apps from scratch, from your first screen to a deployed, working product.',
+    modules: ['React Native', 'Mobile UI & UX', 'APIs & Databases', 'App Deployment'],
+    level: 'Intermediate',
+    recordedPrice: 3000,
+    livePrice: 5000,
+    waMessage: `Hi, I'd like to enrol in the Mobile App Development course. Please send me payment and enrolment details.`,
   },
 ];
 
@@ -72,14 +94,14 @@ export default function ClassesPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-16">
-                Two focused tracks. Real skills. Enrol via WhatsApp and start learning this week.
+                Four focused tracks. Real skills. Enrol via WhatsApp and start learning this week.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {courses.map((course, i) => (
                   <motion.div
                     key={course.id}
-                    className="bg-gradient-to-br from-gray-800/50 to-black/50 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden text-left"
+                    className="bg-gradient-to-br from-gray-800/50 to-black/50 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden text-left h-full flex flex-col"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.15 * i }}
@@ -117,7 +139,7 @@ export default function ClassesPage() {
                         <p className="text-xs text-gray-500 mb-1">Recorded</p>
                         <p className="text-lg font-bold">
                           KES {course.recordedPrice.toLocaleString()}
-                          <span className="text-xs text-gray-400 font-normal"> one-time</span>
+                          <span className="text-xs text-gray-400 font-normal"> one time</span>
                         </p>
                       </div>
                       <div className="bg-teal-500/10 border border-teal-500/30 rounded-xl p-3">
@@ -130,7 +152,7 @@ export default function ClassesPage() {
                     </div>
 
                     {/* WhatsApp CTA */}
-                    <div className="px-6 py-4">
+                    <div className="px-6 py-4 mt-auto">
                       <motion.a
                         href={buildWhatsAppUrl(course.waMessage)}
                         target="_blank"

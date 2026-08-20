@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
               </div>
             </Link>
             <p className="text-gray-400 mb-6 max-w-md">
-              Democratizing tech education and igniting the spark of innovation in every aspiring coder through accessible, high-quality tech education.
+              Kenya's tech education and software partner. Tech courses for individuals, career days for schools, corporate training for companies, and custom software development for businesses, all under one roof.
             </p>
             
           </div>
@@ -38,8 +38,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {[
                 { name: 'Home', href: '/' },
-                { name: 'About', href: '/about' },
-                { name: 'Programs', href: '/#programs' },
+                { name: 'Services', href: '/#services' },
+                { name: 'Courses', href: '/classes' },
                 { name: 'Contact', href: '/contacts' }
               ].map((link, index) => (
                 <li key={link.name} className="opacity-0 animate-fade-in" style={{ animationDelay: `${0.2 + index * 0.1}s` }}>
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
                 <div>
                   <p className="text-gray-400 text-sm">Phone</p>
                   <a href="tel:+254714573892" className="text-gray-300 hover:text-teal-400 transition-colors duration-300">
-                    +254 714573892
+                    +254 714 573 892
                   </a>
                 </div>
               </li>
@@ -77,9 +77,8 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Email</p>
-                  <a href="mailto:info@lets-code.tech" className="text-gray-300 hover:text-teal-400 transition-colors duration-300">
-                                                info@letscodeltd.com
-
+                  <a href="mailto:info@letscodeltd.com" className="text-gray-300 hover:text-teal-400 transition-colors duration-300">
+                    info@letscodeltd.com
                   </a>
                 </div>
               </li>
