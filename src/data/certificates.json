@@ -1,8 +1,16 @@
 {
   "LC-2026-00001": {
+    "studentId": "LC-STU-0001",
     "name": "Amos Karani Wachira Majira",
     "course": "Data Analytics Program",
     "dateIssued": "2026-08-25",
+    "type": "Certificate of Technical Competence"
+  },
+  "LC-2026-00002": {
+    "studentId": "LC-STU-0001",
+    "name": "Amos Karani Wachira Majira",
+    "course": "AI and Machine Learning Program",
+    "dateIssued": "2026-08-26",
     "type": "Certificate of Technical Competence"
   }
 }
