@@ -126,7 +126,6 @@ const testimonials = [
 const clients = [
   { name: "Kereu & Co. Advocates", href: "https://www.kereulaw.co.ke/", font: "Georgia, serif", weight: "bold", color: "white", viewBox: "0 0 260 40" },
   { name: "Mwalimu AI", href: "https://mwalimu-ai-plum.vercel.app/", font: "Arial, sans-serif", weight: "normal", color: "white", viewBox: "0 0 150 40" },
-  { name: "FirmEase", href: "https://law-firm-cms-git-main-letscodes-projects-fbef3206.vercel.app/", font: "Arial, sans-serif", weight: "bold", color: "white", viewBox: "0 0 120 40" },
   { name: "PROPCO", href: "https://counsellin-website.vercel.app/", font: "Arial, sans-serif", weight: "bold", color: "#17D4A7", viewBox: "0 0 110 40" },
 ];
 
