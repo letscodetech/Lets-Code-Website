@@ -260,7 +260,7 @@ export default function HomePage() {
         </section>
 
         {/* Our Services */}
-        <section id="services" className="py-20 px-4 relative z-10">
+        <section id="services" className="scroll-mt-24 py-20 px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <motion.div
               className="text-center mb-16"

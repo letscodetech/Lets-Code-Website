@@ -24,7 +24,7 @@ const Navbar = () => {
     <>
       {/* NAVBAR */}
       <motion.nav
-        className="sticky top-0 z-50 w-full bg-white border-b border-gray-200 shadow-sm h-24"
+        className="fixed top-0 left-0 z-50 w-full bg-white border-b border-gray-200 shadow-sm h-24"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6 }}
@@ -90,7 +90,7 @@ const Navbar = () => {
 
       {/* MOBILE MENU */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-gray-200 shadow-md">
+        <div className="fixed top-24 left-0 z-50 w-full lg:hidden bg-white border-b border-gray-200 shadow-md">
           <div className="px-6 py-4 flex flex-col gap-4">
 
             {menuItems.map((item) => (

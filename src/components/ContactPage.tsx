@@ -1,26 +1,36 @@
-'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import emailjs from 'emailjs-com';
-import Footer from '@/components/Footer';
-import Head from 'next/head';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import emailjs from "emailjs-com";
+import Footer from "@/components/Footer";
+import Head from "next/head";
+import { useState, useEffect } from "react";
 
 const ContactPage: React.FC = () => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
-    emailjs.sendForm('service_bkg03iq', 'template_mfqw4lq', form, '0ZE_zARFVYzE-vqYY')
+    emailjs
+      .sendForm(
+        "service_wnq3e2b",
+        "template_vcjhvz9",
+        form,
+        "p-zogs81k0ZZ5StVG",
+      )
       .then((result) => {
-        // Handle success
-        console.log('Success:', result.text);
-        alert('Message sent successfully!');
-        form.reset(); // Clear the form fields
+        console.log("Success:", result.text);
+        alert("Message sent successfully!");
+        form.reset();
       })
       .catch((error) => {
-        // Handle error
-        console.error('Error:', error.text);
-        alert('Error sending message. Please try again.');
+        console.error("Error:", error.text);
+        alert("Error sending message. Please try again.");
       });
   };
 
@@ -28,15 +38,20 @@ const ContactPage: React.FC = () => {
     <>
       <Head>
         <title>Contact Us | LetsCode</title>
-        <meta name="description" content="Contact LetsCode for inquiries about our programs and services." />
-        <meta name="keywords" content="contact letscode, tech education, software development" />
+        <meta
+          name="description"
+          content="Contact LetsCode for inquiries about our programs and services."
+        />
+        <meta
+          name="keywords"
+          content="contact letscode, tech education, software development"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden relative">
-        {/* Floating animated background shapes */}
         <div className="absolute inset-0 overflow-hidden">
-          {[...Array(8)].map((_, i) => (
+          {mounted && [...Array(8)].map((_, i) => (
             <motion.div
               key={i}
               className="absolute rounded-full bg-gradient-to-r from-teal-500/10 to-emerald-500/10 backdrop-blur-sm"
@@ -57,12 +72,10 @@ const ContactPage: React.FC = () => {
               }}
             />
           ))}
-          
-          {/* Tech grid pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CiAgPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTTAgMGg0MHY0MEgweiIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDMpIiBmaWxsPSJub25lIi8+Cjwvc3ZnPg==')] opacity-20"></div>
+
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CiAgPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTTAgMGg0MHY0MEgweiIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDMpIiBmaWxsPSJub25lIi8+Cjwvc3ZnPg==')] opacity-20" />
         </div>
 
-        {/* Hero Section */}
         <header className="relative pt-32 pb-20 px-4 text-center z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -76,17 +89,16 @@ const ContactPage: React.FC = () => {
               <span className="text-white">Us</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
-              Have questions or ready to start your tech journey? Reach out to us today.
+               Have a question or an enquiry? Reach out to us today.
+
             </p>
           </motion.div>
         </header>
 
-        {/* Contact Section */}
         <section className="py-20 px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <motion.div 
+              <motion.div
                 className="bg-black/30 backdrop-blur-lg rounded-2xl p-8 border border-white/10"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -95,7 +107,9 @@ const ContactPage: React.FC = () => {
                 <div className="mb-8">
                   <div className="inline-flex items-center px-4 py-2 bg-teal-500/20 rounded-full mb-4">
                     <Mail className="w-5 h-5 text-teal-400 mr-2" />
-                    <span className="text-teal-400 font-medium">Send a Message</span>
+                    <span className="text-teal-400 font-medium">
+                      Send a Message
+                    </span>
                   </div>
                   <h2 className="text-3xl font-bold mb-4">
                     <span className="bg-gradient-to-r from-teal-400 to-emerald-500 bg-clip-text text-transparent">
@@ -103,7 +117,8 @@ const ContactPage: React.FC = () => {
                     </span>
                   </h2>
                   <p className="text-gray-400">
-                    If you have any questions or concerns, please feel free to reach out to us. We respond to every call and email.
+                    If you have any questions or concerns, please feel free to
+                    reach out to us. We respond to every call and email.
                   </p>
                 </div>
 
@@ -114,7 +129,10 @@ const ContactPage: React.FC = () => {
                   className="space-y-6"
                 >
                   <div className="input-group">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
                       Your Name
                     </label>
                     <input
@@ -127,9 +145,12 @@ const ContactPage: React.FC = () => {
                       required
                     />
                   </div>
-                  
+
                   <div className="input-group">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
                       Email
                     </label>
                     <input
@@ -142,9 +163,12 @@ const ContactPage: React.FC = () => {
                       required
                     />
                   </div>
-                  
+
                   <div className="input-group">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-300 mb-2"
+                    >
                       Message
                     </label>
                     <textarea
@@ -154,9 +178,9 @@ const ContactPage: React.FC = () => {
                       placeholder="Tell us about what you need help with"
                       className="bg-black/50 border border-teal-500/30 rounded-lg p-3 w-full h-32 text-white focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/20 transition-all resize-none"
                       required
-                    ></textarea>
+                    />
                   </div>
-                  
+
                   <div>
                     <motion.button
                       name="submit"
@@ -173,14 +197,12 @@ const ContactPage: React.FC = () => {
                 </form>
               </motion.div>
 
-              {/* Contact Information */}
-              <motion.div 
+              <motion.div
                 className="space-y-8"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                {/* Contact Card 1 */}
                 <div className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                   <div className="flex items-start">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-r from-teal-500/20 to-emerald-500/20 flex items-center justify-center flex-shrink-0">
@@ -188,15 +210,19 @@ const ContactPage: React.FC = () => {
                     </div>
                     <div className="ml-4">
                       <h3 className="text-xl font-bold mb-2">Call Us</h3>
-                      <p className="text-gray-400 mb-3">Have questions? Give us a call.</p>
-                      <a href="tel:+254714573892" className="text-teal-400 hover:text-teal-300 transition-colors">
+                      <p className="text-gray-400 mb-3">
+                        Have questions? Give us a call.
+                      </p>
+                      <a
+                        href="tel:+254714573892"
+                        className="text-teal-400 hover:text-teal-300 transition-colors"
+                      >
                         +254 714573892
                       </a>
                     </div>
                   </div>
                 </div>
 
-                {/* Contact Card 2 */}
                 <div className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                   <div className="flex items-start">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-r from-teal-500/20 to-emerald-500/20 flex items-center justify-center flex-shrink-0">
@@ -204,43 +230,37 @@ const ContactPage: React.FC = () => {
                     </div>
                     <div className="ml-4">
                       <h3 className="text-xl font-bold mb-2">Email Us</h3>
-                      <p className="text-gray-400 mb-3">Send us an email anytime.</p>
-                      <a href="mailto:info@lets-code.tech" className="text-teal-400 hover:text-teal-300 transition-colors">
+                      <p className="text-gray-400 mb-3">
+                        Send us an email anytime.
+                      </p>
+                      <a
+                        href="mailto:info@letscodeltd.com"
+                        className="text-teal-400 hover:text-teal-300 transition-colors"
+                      >
                         info@letscodeltd.com
                       </a>
                     </div>
                   </div>
                 </div>
 
-                {/* Contact Card 3 */}
                 <div className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                   <div className="flex items-start">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-r from-teal-500/20 to-emerald-500/20 flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-6 h-6 text-teal-400" />
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-xl font-bold mb-2">Visit Us</h3>
-                      <p className="text-gray-400 mb-3">Come visit our office.</p>
+                      <h3 className="text-xl font-bold mb-2">Location</h3>
                       <address className="text-teal-400 not-italic">
-                        Thika, Kenya
+                        Kenya
                       </address>
                     </div>
-                  </div>
-                </div>
-
-                {/* Map Placeholder */}
-                <div className="bg-black/30 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/10 h-64 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <MapPin className="w-12 h-12 text-teal-400 mx-auto mb-4" />
-                    <p className="text-gray-400">Interactive map coming soon</p>
                   </div>
                 </div>
               </motion.div>
             </div>
           </div>
         </section>
-
-       
+        <Footer />
       </div>
     </>
   );

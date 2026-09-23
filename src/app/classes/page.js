@@ -20,8 +20,8 @@ const courses = [
       'From your first HTML tag to production ready Next.js apps. Build real, fullstack products on the web.',
     modules: ['HTML & CSS', 'JavaScript', 'React', 'Next.js', 'APIs & Databases'],
     level: 'Beginner → Advanced',
-    recordedPrice: 3000,
-    livePrice: 5000,
+    recordedPrice: 5000,
+    livePrice: 10000,
     waMessage: `Hi, I'd like to enrol in the Fullstack Web Development course. Please send me payment and enrolment details.`,
   },
   {
@@ -29,10 +29,10 @@ const courses = [
     name: 'AI & Automation',
     description:
       'Build intelligent systems and automate real world workflows using Python and modern AI libraries.',
-    modules: ['Python Fundamentals', 'NumPy & Pandas', 'Machine Learning',  'Automation & Scripting'],
+    modules: ['Python Fundamentals', 'NumPy & Pandas', 'Machine Learning', 'Automation & Scripting'],
     level: 'Intermediate',
-    recordedPrice: 3000,
-    livePrice: 5000,
+    recordedPrice: 5000,
+    livePrice: 10000,
     waMessage: `Hi, I'd like to enrol in the AI & Automation course. Please send me payment and enrolment details.`,
   },
   {
@@ -42,8 +42,8 @@ const courses = [
       'Turn raw data into decisions. Learn to collect, query, clean, and visualise data the way working analysts do.',
     modules: ['Foundations', 'SQL', 'Python for Data', 'Visualization & Capstone'],
     level: 'Beginner → Intermediate',
-    recordedPrice: 3000,
-    livePrice: 5000,
+    recordedPrice: 5000,
+    livePrice: 10000,
     waMessage: `Hi, I'd like to enrol in the Data Analytics course. Please send me payment and enrolment details.`,
   },
   {
@@ -53,9 +53,31 @@ const courses = [
       'Design and ship mobile apps from scratch, from your first screen to a deployed, working product.',
     modules: ['React Native', 'Mobile UI & UX', 'APIs & Databases', 'App Deployment'],
     level: 'Intermediate',
-    recordedPrice: 3000,
-    livePrice: 5000,
+    recordedPrice: 5000,
+    livePrice: 10000,
     waMessage: `Hi, I'd like to enrol in the Mobile App Development course. Please send me payment and enrolment details.`,
+  },
+  {
+    id: 'ai-agents',
+    name: 'AI Agents',
+    description:
+      'Design and build autonomous AI agents that can reason, use tools, and complete real tasks on their own.',
+    modules: ['LLM Fundamentals', 'Prompt Engineering', 'Tool Use & APIs', 'Agent Frameworks'],
+    level: 'Intermediate',
+    recordedPrice: 5000,
+    livePrice: 10000,
+    waMessage: `Hi, I'd like to enrol in the AI Agents course. Please send me payment and enrolment details.`,
+  },
+  {
+    id: 'game-dev',
+    name: 'Game Development',
+    description:
+      'Build and ship your own games, from core mechanics and design to a finished, playable product.',
+    modules: ['Game Design Basics', 'Unity/Godot', 'Physics & Animation', 'Publishing & Deployment'],
+    level: 'Beginner → Intermediate',
+    recordedPrice: 5000,
+    livePrice: 10000,
+    waMessage: `Hi, I'd like to enrol in the Game Development course. Please send me payment and enrolment details.`,
   },
 ];
 
@@ -94,7 +116,7 @@ export default function ClassesPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-16">
-                Four focused tracks. Real skills. Enrol via WhatsApp and start learning this week.
+                Six focused tracks. Real skills. Enrol via WhatsApp and start learning this week.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -147,6 +169,9 @@ export default function ClassesPage() {
                         <p className="text-lg font-bold">
                           KES {course.livePrice.toLocaleString()}
                           <span className="text-xs text-gray-400 font-normal">/mo</span>
+                        </p>
+                        <p className="text-xs text-gray-400 mt-1">
+                          Personal tutor, learn at your own pace
                         </p>
                       </div>
                     </div>

@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Location</p>
-                  <p className="text-gray-300">Thika, Kenya</p>
+                  <p className="text-gray-300"> Kenya</p>
                 </div>
               </li>
             </ul>
