@@ -197,7 +197,6 @@ export default function ClassesPage() {
           </div>
         </header>
 
-        <Footer />
       </div>
     </>
   );
