@@ -12,5 +12,12 @@
     "course": "AI and Machine Learning Program",
     "dateIssued": "2026-08-26",
     "type": "Certificate of Technical Competence"
+  },
+  "LC-2026-00003": {
+    "studentId": "LC-STU-0002",
+    "name": "Laureen Wariara Munyua",
+    "course": "Full Stack Development Program",
+    "dateIssued": "2026-07-01",
+    "type": "Certificate of Technical Competence"
   }
 }
