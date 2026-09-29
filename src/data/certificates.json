@@ -19,5 +19,12 @@
     "course": "Full Stack Development Program",
     "dateIssued": "2026-07-01",
     "type": "Certificate of Technical Competence"
+  },
+  "LC-2026-00004": {
+    "studentId": "LC-STU-0003",
+    "name": "Paul Otung",
+    "course": "Data Analytics Program",
+    "dateIssued": "2026-09-28",
+    "type": "Certificate of Technical Competence"
   }
 }
