@@ -12,13 +12,14 @@ const Navbar = () => {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
-  const menuItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/#services' },
-    { name: 'Courses', href: '/classes' },
-    { name: 'Contact', href: '/contacts' },
-  ];
+const menuItems = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/#services' },
+  { name: 'Courses', href: '/classes' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '/contacts' },
+];
 
   return (
     <>
