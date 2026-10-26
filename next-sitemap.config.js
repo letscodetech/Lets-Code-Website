@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://letcodeltd.com',
+  siteUrl: 'https://letscodeltd.com',
   generateRobotsTxt: true,
   exclude: ['/server-sitemap.xml'], // optional if using SSR
   robotsTxtOptions: {
